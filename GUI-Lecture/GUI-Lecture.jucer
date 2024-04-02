@@ -2035,6 +2035,8 @@
         <FILE id="HKy8Ej" name="MainComponent.cpp" compile="1" resource="0"
               file="Source/GUI/MainComponent.cpp"/>
         <FILE id="arIeSz" name="MainComponent.h" compile="0" resource="0" file="Source/GUI/MainComponent.h"/>
+        <FILE id="XgFcZz" name="ButtonWidgets.h" compile="0" resource="0" file="Source/GUI/ButtonWidgets.h"/>
+        <FILE id="nfhKLR" name="SliderWidgets.h" compile="0" resource="0" file="Source/GUI/SliderWidgets.h"/>
       </GROUP>
       <FILE id="HExIda" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
@@ -2043,6 +2045,11 @@
       <FILE id="D4SLuU" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="Y32M9E" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="fm6nfi" name="SharedImages.cpp" compile="1" resource="0"
+            file="Source/SharedImages.cpp"/>
+      <FILE id="Mhdr1Y" name="SharedImages.h" compile="0" resource="0" file="Source/SharedImages.h"/>
+      <FILE id="gbOGiY" name="StandardIncludes.h" compile="0" resource="0"
+            file="Source/StandardIncludes.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>

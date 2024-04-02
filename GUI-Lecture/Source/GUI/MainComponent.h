@@ -11,6 +11,10 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "../PluginProcessor.h"
+#include "../SharedImages.h"
+#include "SliderWidgets.h"
+#include "ButtonWidgets.h"
 
 //==============================================================================
 /*
@@ -18,12 +22,18 @@
 class MainComponent  : public juce::Component
 {
 public:
-    MainComponent();
+    MainComponent(GUILectureAudioProcessor&);
     ~MainComponent() override;
 
     void paint (juce::Graphics&) override;
     void resized() override;
 
 private:
+    GUILectureAudioProcessor&   audioProcessor;
+    SharedImages*               m_pSharedImages;
+    BigKnob                     bigKnob;
+    VertSlider                  vertSlider;
+    HitPads                     hitPads;
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

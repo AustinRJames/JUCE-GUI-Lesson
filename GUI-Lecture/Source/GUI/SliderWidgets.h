@@ -1,0 +1,94 @@
+/*
+  ==============================================================================
+
+    SliderWidgets.h
+    Created: 24 Mar 2024 12:37:47pm
+    Author:  Austin James
+
+  ==============================================================================
+*/
+
+#pragma once
+
+#include "../SharedImages.h"
+
+class BigKnob : public juce::Slider
+{
+public:
+    BigKnob(SharedImages* i) : knobImage(i->getBigKnob())
+    {
+//        setSize(488, 430);
+        
+        setTextBoxStyle (juce::Slider::NoTextBox, true, 0, 0);
+        setSliderStyle (juce::Slider::RotaryHorizontalVerticalDrag);
+        
+    }
+    
+    
+    ~BigKnob() {};
+    
+    void paint(juce::Graphics& g) override
+    {
+        
+        const double fractRotation = (getValue() - getMinimum()) / (getMaximum() - getMinimum());
+        
+        int frameIdx = floor (fractRotation * (numFrames - 1));
+        
+        const int frameStartY = frameIdx * frameHeight;
+        
+//        int yPos = index * frameHeight;
+        
+        g.drawImage(knobImage, 0, 0, getWidth(), getHeight(), 0, frameStartY, 430, frameHeight);
+        
+    }
+    
+    
+private:
+    juce::Image& knobImage;
+    
+    int numFrames = 245;
+    
+    int frameHeight = 490;
+};
+
+
+class VertSlider : public juce::Slider
+{
+public:
+    
+    VertSlider(SharedImages* i) : sliderImage(i->getVertSlider())
+    {
+        
+        setTextBoxStyle (juce::Slider::NoTextBox, true, 0, 0);
+        setSliderStyle (juce::Slider::LinearBarVertical);
+
+    }
+    
+    ~VertSlider(){};
+    
+    void paint(juce::Graphics& g) override
+    {
+        
+        const double fractPosition = (getValue() - getMinimum()) / (getMaximum() - getMinimum());
+        
+        int frameIdx = floor (fractPosition * (numFrames - 1));
+        
+        const int frameStartY = frameIdx * frameHeight;
+                
+        g.drawImage(sliderImage, 0, 0, getWidth(), getHeight(), 0, frameStartY, frameWidth, frameHeight);
+                
+    }
+    
+    
+    
+    
+private:
+    juce::Image& sliderImage;
+    
+    int numFrames = 129;
+    
+    int frameHeight = 394;
+      
+    int frameWidth = 154;
+    
+};

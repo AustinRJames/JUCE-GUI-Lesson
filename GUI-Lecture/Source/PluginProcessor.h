@@ -9,6 +9,7 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "SharedImages.h"
 
 //==============================================================================
 /**
@@ -52,8 +53,14 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
+    
+    
+    SharedImages* getSharedImages()                         { return m_pSharedImagesPtr;        }
 
 private:
+    
+    juce::SharedResourcePointer<SharedImages>                   m_pSharedImagesPtr;
+
 
     
     //==============================================================================
