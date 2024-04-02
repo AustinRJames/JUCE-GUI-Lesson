@@ -2035,14 +2035,18 @@
         <FILE id="HKy8Ej" name="MainComponent.cpp" compile="1" resource="0"
               file="Source/GUI/MainComponent.cpp"/>
         <FILE id="arIeSz" name="MainComponent.h" compile="0" resource="0" file="Source/GUI/MainComponent.h"/>
+        <FILE id="Vb4QNt" name="SliderWidgets.h" compile="0" resource="0" file="Source/GUI/SliderWidgets.h"/>
       </GROUP>
+      <FILE id="D4SLuU" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="Y32M9E" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
       <FILE id="HExIda" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="cJmfzI" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="D4SLuU" name="PluginEditor.cpp" compile="1" resource="0"
-            file="Source/PluginEditor.cpp"/>
-      <FILE id="Y32M9E" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="FADUov" name="SharedImages.cpp" compile="1" resource="0"
+            file="Source/SharedImages.cpp"/>
+      <FILE id="XMBp2C" name="SharedImages.h" compile="0" resource="0" file="Source/SharedImages.h"/>
     </GROUP>
   </MAINGROUP>
   <MODULES>
