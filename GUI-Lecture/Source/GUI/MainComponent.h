@@ -37,6 +37,7 @@ private:
     HitPads                     hitPads;
     WheelSlider                 wheelSlider;
     VUMeter                     vuMeter;
+    SimpleMeter                 simpleMeter;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

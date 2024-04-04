@@ -101,8 +101,8 @@ void GUILectureAudioProcessor::prepareToPlay (double sampleRate, int samplesPerB
     
     ballisticsFilterOutput.prepare(spec);
     
-    ballisticsFilterOutput.setAttackTime (300.f);
-    ballisticsFilterOutput.setReleaseTime (300.f);
+    ballisticsFilterOutput.setAttackTime (3.f);
+    ballisticsFilterOutput.setReleaseTime (3.f);
     ballisticsFilterOutput.setLevelCalculationType (juce::dsp::BallisticsFilterLevelCalculationType::RMS);
     
     
@@ -155,11 +155,11 @@ void GUILectureAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, j
         {
         float outputPeak = buffer.getMagnitude (i, 0, buffer.getNumSamples()); // storing amp that has been calc by ballistics
         
-//        float outputProcessed = ballisticsFilterOutput.processSample (i, outputPeak);
+        float outputProcessed = ballisticsFilterOutput.processSample (i, outputPeak);
         
-        // outputProcessed = juce::jlimit (0.f, 1.f,outputProcessed);
+        outputProcessed = juce::jlimit (0.f, 1.f,outputProcessed);
         
-        outputLevel[i].store (outputPeak);
+        outputLevel[i].store (outputProcessed);
         }
 
     if (buffer.getNumChannels() < 2)

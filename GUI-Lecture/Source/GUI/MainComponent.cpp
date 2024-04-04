@@ -12,13 +12,14 @@
 #include "MainComponent.h"
 
 //==============================================================================
-MainComponent::MainComponent(GUILectureAudioProcessor& p) : audioProcessor(p), m_pSharedImages(p.getSharedImages()), bigKnob(m_pSharedImages), vertSlider(m_pSharedImages), hitPads(m_pSharedImages), wheelSlider(m_pSharedImages), vuMeter(audioProcessor)
+MainComponent::MainComponent(GUILectureAudioProcessor& p) : audioProcessor(p), m_pSharedImages(p.getSharedImages()), bigKnob(m_pSharedImages), vertSlider(m_pSharedImages), hitPads(m_pSharedImages), wheelSlider(m_pSharedImages), vuMeter(audioProcessor), simpleMeter(audioProcessor)
 {
     addAndMakeVisible(bigKnob);
     addAndMakeVisible(vertSlider);
     addAndMakeVisible(hitPads);
     addAndMakeVisible(wheelSlider);
     addAndMakeVisible(vuMeter);
+    addAndMakeVisible(simpleMeter);
     
     wheelSlider.onDragEnd = [this] ()
     {
@@ -42,6 +43,7 @@ void MainComponent::resized()
 //    bigKnob.setBounds(250, 250, 215, 245);
 //    vertSlider.setBounds(0, 202, 154, 394);
     vuMeter.setBounds(0, 0, 536, 280);
+    simpleMeter.setBounds(250, 250, 50, 250);
 
     hitPads.setBounds(736, 28, 182, 210);
     wheelSlider.setBounds(500, 200, 160, 406);
