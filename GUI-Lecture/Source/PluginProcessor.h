@@ -55,10 +55,22 @@ public:
     void setStateInformation (const void* data, int sizeInBytes) override;
     
     SharedImages* getSharedImagesPtr() { return m_pSharedImagesPtr; };
+    
+    float getOutputLevel(bool isRightChannel)
+    {
+        if(isRightChannel)
+            return outputLevel[1].load();
+        else
+            return outputLevel[0].load();
+    }
 
+    
 private:
     juce::SharedResourcePointer<SharedImages>     m_pSharedImagesPtr;
-
+    
+    std::atomic<float>                           outputLevel[2] = {0.f, 0.f};
+    
+    juce::dsp::BallisticsFilter<float>                ballisticsFilterOutput;
     
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GUILectureAudioProcessor)

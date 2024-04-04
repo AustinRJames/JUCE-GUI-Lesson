@@ -26,6 +26,14 @@ public:
     
     juce::Image& getHorzSlider()      { return m_HorzSlider; };
     
+    juce::Image& getWheel()           { return m_Wheel; };
+    
+    juce::Image& getVUMeter()         { return m_VuMeter; };
+    
+    juce::Image& getPadButtonOn()     { return m_PadButtonOn; };
+
+    juce::Image& getPadButtonOff()    { return m_PadButtonOff; };
+    
     
     
 private:
@@ -40,6 +48,10 @@ private:
     juce::Image m_PadButtonOn;
     
     juce::Image m_PadButtonOff;
+    
+    juce::Image m_Wheel;
+    
+    juce::Image m_VuMeter;
     
     
 };

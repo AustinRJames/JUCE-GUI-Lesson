@@ -21,5 +21,15 @@ void SharedImages::loadImages()
     
     m_HorzSlider      = juce::ImageCache::getFromMemory(BinaryData::Slider_horizontal_png, BinaryData::Slider_horizontal_pngSize);
     
+    m_PadButtonOn     = juce::ImageCache::getFromMemory(BinaryData::Button_en_1_png, BinaryData::Button_en_1_pngSize);
+    
+    m_PadButtonOff    = juce::ImageCache::getFromMemory(BinaryData::Button_dis_1_png, BinaryData::Button_dis_1_pngSize);
+    
+    m_Wheel           = juce::ImageCache::getFromMemory(BinaryData::Wheel_png, BinaryData::Wheel_pngSize);
+    
+    m_VuMeter         = juce::ImageCache::getFromMemory(BinaryData::vu_meter_png, BinaryData::vu_meter_pngSize);
+    
+    
+    
     
 }

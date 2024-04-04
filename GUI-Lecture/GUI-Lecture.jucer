@@ -2035,6 +2035,8 @@
         <FILE id="HKy8Ej" name="MainComponent.cpp" compile="1" resource="0"
               file="Source/GUI/MainComponent.cpp"/>
         <FILE id="arIeSz" name="MainComponent.h" compile="0" resource="0" file="Source/GUI/MainComponent.h"/>
+        <FILE id="OVRe3A" name="ButtonWidget.h" compile="0" resource="0" file="Source/GUI/ButtonWidget.h"/>
+        <FILE id="subo26" name="MeterWidgets.h" compile="0" resource="0" file="Source/GUI/MeterWidgets.h"/>
         <FILE id="Vb4QNt" name="SliderWidgets.h" compile="0" resource="0" file="Source/GUI/SliderWidgets.h"/>
       </GROUP>
       <FILE id="D4SLuU" name="PluginEditor.cpp" compile="1" resource="0"
@@ -2059,6 +2061,7 @@
     <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_dsp" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
@@ -2084,6 +2087,7 @@
         <MODULEPATH id="juce_graphics" path="../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_basics" path="../../JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../JUCE/modules"/>
+        <MODULEPATH id="juce_dsp" path="../../JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
   </EXPORTFORMATS>
