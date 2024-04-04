@@ -39,6 +39,8 @@ public:
     
     juce::Image& getVUMeter()         { return m_VUMeter; };
     
+    juce::Image& getWheel()           { return m_Wheel; };
+    
     
 private:
     
@@ -61,6 +63,9 @@ private:
     juce::Image m_SwitchDown;
     
     juce::Image m_VUMeter;
+    
+    juce::Image m_Wheel;
+    
     
     
 };

@@ -92,3 +92,47 @@ private:
     int frameWidth = 154;
     
 };
+
+
+class WheelSlider : public juce::Slider
+{
+public:
+    
+    WheelSlider(SharedImages* i) : sliderImage(i->getWheel())
+    {
+        
+        setTextBoxStyle (juce::Slider::NoTextBox, true, 0, 0);
+        setSliderStyle (juce::Slider::LinearBarVertical);
+        
+        setValue(5.0);
+        
+        
+    }
+    
+    ~WheelSlider(){};
+    
+    void paint(juce::Graphics& g) override
+    {
+        
+        const double fractPosition = (getValue() - getMinimum()) / (getMaximum() - getMinimum());
+        
+        int frameIdx = floor (fractPosition * (numFrames - 1));
+        
+        const int frameStartY = frameIdx * frameHeight;
+        
+        g.drawImage(sliderImage, 0, 0, getWidth(), getHeight(), 0, frameStartY, frameWidth, frameHeight);
+        
+    }
+    
+    
+private:
+    juce::Image& sliderImage;
+    
+    int numFrames = 129;
+    
+    int frameHeight = 406;
+    
+    int frameWidth = 160;
+    
+};
+    

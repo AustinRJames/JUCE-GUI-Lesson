@@ -34,5 +34,6 @@ void SharedImages::loadImages()
     
     m_VUMeter = juce::ImageCache::getFromMemory(BinaryData::vu_meter_png, BinaryData::vu_meter_pngSize);
     
-    
+    m_Wheel = juce::ImageCache::getFromMemory(BinaryData::Wheel_png, BinaryData::Wheel_pngSize);
+
 }

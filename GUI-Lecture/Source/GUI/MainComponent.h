@@ -15,6 +15,7 @@
 #include "../SharedImages.h"
 #include "SliderWidgets.h"
 #include "ButtonWidgets.h"
+#include "MeterWidget.h"
 
 //==============================================================================
 /*
@@ -34,6 +35,8 @@ private:
     BigKnob                     bigKnob;
     VertSlider                  vertSlider;
     HitPads                     hitPads;
+    WheelSlider                 wheelSlider;
+    VUMeter                     vuMeter;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
